@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 14:23:50 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/08/04 11:58:17 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/09/15 22:05:58 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ public:
 	Contact();
 	~Contact();
 	int	inicialize_fields(void);
+	int	print_contact(void);
 };
 
 #endif

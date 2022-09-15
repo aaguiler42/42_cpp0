@@ -23,8 +23,6 @@ fclean:	clean
 re: fclean all
 
 test: $(NAME)
-	./megaphone "shhhhh... I think the students are asleep..."
-	./megaphone Damnit " ! " "Sorry students, I thought this thing was off."
-	./megaphone
+	./phonebook
 
 .PHONY: all clean fclean re test
