@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 14:23:50 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/09/15 22:13:49 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/09/25 20:02:39 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 
 # include <string>
 # include <iostream>
+# include "Contact.hpp"
 
 class Phonebook {
 private:
-	std::Contact	contacts[8];
+	Contact	_contacts[8];
 
 public:
 };
