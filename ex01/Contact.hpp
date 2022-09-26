@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 14:23:50 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/09/15 22:05:58 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/09/26 19:55:38 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 class Contact {
 private:
-	static std::string	field_names[5];
-	std::string	fields[5];
+	static std::string	_field_names[5];
+	std::string	_fields[5];
 
 public:
 	Contact();

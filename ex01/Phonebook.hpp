@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 14:23:50 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/09/25 20:02:39 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/09/26 20:05:40 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ private:
 	Contact	_contacts[8];
 
 public:
+	Phonebook();
+	~Phonebook();
+	int	prueba(void);
 };
 
 #endif
