@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 11:50:51 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/09/26 19:57:20 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/09/27 17:51:58 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,22 @@ int	Contact::inicialize_fields(void){
 	for (int i = 0; i < 5; i++){
 		_fields[i] = tf[i];
 	}
-	return(1);
+	return(0);
 }
 
-int	Contact::print_contact(void){
+void	Contact::print_contact(void){
 	for (int i = 0; i < 5; i++){
 		std::cout << _field_names[i] + ": " + _fields[i] + "\n";
 	}
-	return(1);
+}
+
+void	Contact::print_table(void){
+	std::cout << "|";
+	for (int i = 0; i < 5; i++){
+		if (_fields[i].length() > 10)
+			std::cout << _fields[i].substr(0, 9) << ".|"; 
+		else
+			std::cout << std::setw(10) << _fields[i] << "|";
+	}
+	std::cout << "\n";
 }

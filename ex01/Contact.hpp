@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 14:23:50 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/09/26 19:55:38 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/09/27 16:46:51 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string>
 # include <iostream>
+# include <iomanip>
 
 class Contact {
 private:
@@ -24,8 +25,9 @@ private:
 public:
 	Contact();
 	~Contact();
-	int	inicialize_fields(void);
-	int	print_contact(void);
+	int		inicialize_fields(void);
+	void	print_contact(void);
+	void	print_table(void);
 };
 
 #endif

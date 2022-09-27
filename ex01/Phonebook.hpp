@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 14:23:50 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/09/26 20:05:40 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/09/27 16:23:28 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,16 @@
 
 class Phonebook {
 private:
+	int		_nContacts;
 	Contact	_contacts[8];
 
 public:
 	Phonebook();
 	~Phonebook();
-	int	prueba(void);
+
+	void	add_contact(void);
+	int		get_n_contacts(void);
+	void	print_contacts(void);
 };
 
 #endif
