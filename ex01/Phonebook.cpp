@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 11:50:51 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/09/28 16:58:06 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/10/04 20:35:57 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,12 @@ void	Phonebook::print_contacts(void){
 	for (int i = 0; i < n; i++){
 		_contacts[i].print_table();
 	}
+}
+
+void	Phonebook::print_n_contact(int n){
+	if (n <= 0 || n > 8 || (n > _nContacts)){
+		std::cout << "Invalid index\n";
+		return ;
+	}
+	_contacts[(n - 1) % 8].print_contact();
 }
