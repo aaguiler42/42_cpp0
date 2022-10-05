@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 11:53:32 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/10/04 21:21:00 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/10/04 21:36:23 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(void){
 			std::getline(std::cin, number);
 			if (std::cin.eof())
 				break;
-			if ((number[0] >= '0' && number[0] <= '9') || number.length() >= 8)
+			if ((number[0] >= '0' && number[0] <= '9') && number.length() <= 8)
 				intNumber = std::stoi(number);
 			else
 				intNumber = -1;
