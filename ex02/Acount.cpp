@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:53:38 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/10/07 17:38:58 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/10/07 19:02:44 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ bool	Account::makeWithdrawal(int withdrawal){
 		_totalNbWithdrawals++;
 		_amount -= withdrawal;
 		_totalAmount -= withdrawal;
+		std::cout << ";withdrawal:" << withdrawal;
 		std::cout << ";amount:" << _amount << ";nb_withdrawals:" << _nbWithdrawals << "\n";
 		return (true);
 	}
@@ -95,5 +96,11 @@ void	Account::displayStatus(void) const{
 }
 
 void	Account::_displayTimestamp(void){
-	std::cout << "[Timestamp] ";
+	time_t	now = time(0);
+	tm		*ltm = localtime(&now);
+
+	std::cout << "[" << ltm->tm_year + 1900;
+	std::cout << (ltm->tm_mon + 1 < 10 ? "0" : "") << ltm->tm_mon + 1;
+	std::cout << (ltm->tm_mday < 10 ? "0" : "") << ltm->tm_mday;
+	std::cout << "_" << ltm->tm_hour << ltm->tm_min << ltm->tm_sec << "] ";
 }
