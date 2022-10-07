@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:53:38 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/10/06 19:53:56 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/10/07 17:38:58 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,28 @@ void	Account::displayAccountsInfos(void){
 }
 
 void	Account::makeDeposit(int deposit){
-	(void)deposit;
+	_nbDeposits++;
+	_totalNbDeposits++;
+	_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";p_amount:" << checkAmount();
+	_amount += deposit;
+	_totalAmount += deposit;
+	std::cout << ";deposit:" << deposit << ";amount:" << _amount << ";nb_deposits:" << _nbDeposits << "\n";
 }
 
 bool	Account::makeWithdrawal(int withdrawal){
-	(void)withdrawal;
-	return (true);
+	_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";p_amount:" << checkAmount();
+	if (withdrawal <= _amount){
+		_nbWithdrawals++;
+		_totalNbWithdrawals++;
+		_amount -= withdrawal;
+		_totalAmount -= withdrawal;
+		std::cout << ";amount:" << _amount << ";nb_withdrawals:" << _nbWithdrawals << "\n";
+		return (true);
+	}
+	std::cout << ";withdrawal:refused\n";
+	return (false);
 }
 
 int	Account::checkAmount(void) const{
